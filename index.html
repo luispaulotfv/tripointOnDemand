@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html manifest="tripointOnDemand.appcache">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tripoint OnDemand</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/site.css">
+</head>
+
+<body ononline="displayBrowserMode()" onoffline="displayBrowserMode()">
+    <div class="container">
+        <div class="panel panel-default" style="margin-top: 20px;">
+            <div class="panel-heading">
+                <h3>Tripoint OnDemand ...</h3>
+                <h6>Após a primeira visita pode usar o site em modo offline.</h6>
+                <hr/>
+                <h4>Toda <strong>a informação é ficticia</strong>, este site é meramente experimental ...</h4>
+                <h6 id="help-container" class="text-info"></h6>
+                <hr/>
+                <div id="browser-mode"></div>
+            </div>
+            <div class="panel-body">
+                <div id="list-container"></div>
+                <div id="detail-container"></div>
+            </div>
+            <div class="panel-footer">
+                <div id="localStorageUsedSpace">
+                    <h4 id="localStorageUsedSpaceMsg" class="text-warning text-center">Click refresh para calcular o espaço ocupado no local storage</h4>
+                </div>
+                <button class="btn btn-default btn-block" onclick="clickRefreshUsedLocalStorage()">Refresh</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

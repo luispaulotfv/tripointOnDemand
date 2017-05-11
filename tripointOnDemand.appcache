@@ -1,0 +1,17 @@
+CACHE MANIFEST
+# 2017-05-06 v.1.001
+
+# Explicitly cached 'master entries'.
+CACHE:
+index.html
+images/logo.png
+images/offline.jpg
+css/bootstrap.min.css
+css/site.css
+js/jquery-3.2.1.min.js
+js/bootstrap.min.js
+js/index.js
+
+# Explicitly loaded from server
+NETWORK:
+*
