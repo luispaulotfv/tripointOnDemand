@@ -440,16 +440,18 @@ function getListHtml() {
     var myHtml = "";
     for (var i = 0; i < packageList.length; i++) {
         var pack = packageList[i];
-        myHtml += '<div>';
-        myHtml += '<div id="keepOffline' + pack.id + '" class="text-right hidden"><span class="label label-success">Favorito</span></div>';
-        myHtml += spinnerHtml(pack.id);
-        myHtml += '<img id="' + pack.id + '" src="" alt="' + pack.name + '" class="img-responsive center-block hidden">';
-        myHtml += '<h5>' + pack.name + '</h5>';
-        myHtml += '<div class="text-warning">' + pack.date + '</div>';
-        myHtml += '<br/>';
-        myHtml += '<buttom class="btn btn-default btn-block" onclick="clickDetail(' + "'" + pack.id + "'" + ')">Ver detalhes</buttom>';
-        myHtml += '</div>';
-        myHtml += '<hr/>';
+        if (pack && pack !== null) {
+            myHtml += '<div>';
+            myHtml += '<div id="keepOffline' + pack.id + '" class="text-right hidden"><span class="label label-success">Favorito</span></div>';
+            myHtml += spinnerHtml(pack.id);
+            myHtml += '<img id="' + pack.id + '" src="" alt="' + pack.name + '" class="img-responsive center-block hidden">';
+            myHtml += '<h5>' + pack.name + '</h5>';
+            myHtml += '<div class="text-warning">' + pack.date + '</div>';
+            myHtml += '<br/>';
+            myHtml += '<buttom class="btn btn-default btn-block" onclick="clickDetail(' + "'" + pack.id + "'" + ')">Ver detalhes</buttom>';
+            myHtml += '</div>';
+            myHtml += '<hr/>';
+        }
     }
     return myHtml;
 };
