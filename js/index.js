@@ -394,7 +394,7 @@ function displayImage(pack, origin) {
         if (pack.base64Img != "") {
             img.setAttribute('src', pack.base64Img);
         } else {
-            img.setAttribute('src', '/images/offline.jpg');
+            img.setAttribute('src', '/tripointOnDemand/images/offline.jpg');
         }
     }
     img.addEventListener('load', function() {
